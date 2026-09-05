@@ -29,21 +29,26 @@
 #define PROBE_IO_RAW
 #define PROBE_CDC_UART
 
+
+
 // PIO config
+// Using pins 16 and 17 for the SWCLK and WSDIO respectively.
 #define PROBE_SM 0
-#define PROBE_PIN_OFFSET 2
-#define PROBE_PIN_SWCLK (PROBE_PIN_OFFSET + 0) // 2
-#define PROBE_PIN_SWDIO (PROBE_PIN_OFFSET + 1) // 3
+#define PROBE_PIN_OFFSET 16
+#define PROBE_PIN_SWCLK (PROBE_PIN_OFFSET + 0) // 16
+#define PROBE_PIN_SWDIO (PROBE_PIN_OFFSET + 1) // 17
 // Target reset config
 #define PROBE_PIN_RESET 1
 
 // UART config
-#define PROBE_UART_TX 4
-#define PROBE_UART_RX 5
-#define PROBE_UART_INTERFACE uart1
+// routed to pins 12 & 13 on the cartridge. This leaves potential UPDI secondary UART on pins 14 & 15 
+#define PROBE_UART_TX 12
+#define PROBE_UART_RX 13
+#define PROBE_UART_INTERFACE uart0
 #define PROBE_UART_BAUDRATE 115200
 
-#define PROBE_USB_CONNECTED_LED 25
+// no LEDs on the cartridge
+//#define PROBE_USB_CONNECTED_LED 25
 
 #define PROBE_PRODUCT_STRING "Debugprobe on Pico (CMSIS-DAP)"
 

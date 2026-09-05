@@ -1,3 +1,6 @@
+> NOTE for the debugprobe as kidDo cartridge, simply run the following: `bash build.sh`.
+
+
 # Debugprobe
 
 Firmware source for the Raspberry Pi Debug Probe SWD/UART accessory. Can also be run on a Raspberry Pi Pico or Pico 2.
